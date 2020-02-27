@@ -1,0 +1,8 @@
+schema: 'src/**/**/schema.ts'
+watch: 'src/**/**/schema.ts'
+silent: true # Please shut up
+generates:
+  src/types.ts:
+    plugins:
+      - typescript # Generate types for TypeScript - those are usually relevant for both client side and server side code
+      - typescript-resolvers # Generate TypeScript signature for server-side resolvers
